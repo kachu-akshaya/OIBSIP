@@ -1,51 +1,58 @@
-# Random Password Generator Documentation
+# BMI Calculator
 
 ## Overview
-The Random Password Generator is a simple Python script that creates secure, customizable passwords based on user preferences. This tool helps users generate strong passwords for enhanced security.
+The BMI Calculator is a Python program that calculates Body Mass Index (BMI) based on user-provided weight and height measurements. It provides both the numerical BMI value and a classification category according to standard health guidelines.
 
 ## Features
-- Customizable password length
-- Option to include/exclude letters (uppercase and lowercase)
-- Option to include/exclude numbers
-- Option to include/exclude special symbols
-- Input validation to ensure at least one character type is selected
+- Input validation for weight and height values
+- Clear BMI classification based on WHO standards
+- User-friendly prompts with error handling
+- Handles both metric units (kg and meters)
 
 ## Installation
 1. Ensure you have Python 3.x installed on your system
-2. Clone or download the `User.py` file from this repository
+2. Download or clone the `Bmi.py` file from this repository
 
 ## Usage
 Run the script using Python:
 ```
-python User.py
+python Bmi.py
 ```
 
 Follow the prompts:
-1. Enter the desired password length
-2. Specify whether to include letters (y/n)
-3. Specify whether to include numbers (y/n)
-4. Specify whether to include symbols (y/n)
+1. Enter your weight in kilograms (must be between 10-500 kg)
+2. Enter your height in meters (must be between 0.5-3 meters)
 
-The script will then generate and display a random password based on your preferences.
+The program will then calculate and display your BMI along with the appropriate classification.
+
+## BMI Classification
+- Underweight: BMI less than 18.5
+- Normal weight: BMI between 18.5 and 24.9
+- Overweight: BMI between 25 and 29.9
+- Obesity: BMI of 30 or greater
 
 ## Example
 ```
-Enter password length: 12
-Include letters? (y/n): y
-Include numbers? (y/n): y
-Include symbols? (y/n): n
-Generated password: aB7xK9pQ2rT3
+BMI Calculator
+Enter weight (kg): 68
+Enter height (meters): 1.75
+
+Your BMI is: 22.20
+You are classified as: Normal weight
 ```
 
 ## Requirements
 - Python 3.x
-- Standard Python libraries (random, string)
+- No external dependencies required
 
-## Security Note
-This script uses Python's `random` module which is sufficient for general purpose password generation. For cryptographic applications requiring higher security, consider using the `secrets` module instead.
+## Important Notes
+- This calculator uses the standard BMI formula: weight (kg) / (height (m))²
+- BMI is a screening tool, not a direct measure of body fat or health
+- Consult with healthcare professionals for personalized health advice
+- The calculator includes input validation to ensure reasonable values
 
 ## Contributing
-Feel free to fork this project and submit pull requests for any improvements.
+Feel free to fork this project and submit pull requests for any improvements, such as adding imperial units support or enhanced visualizations.
 
 ## License
 This project is open source and available under the MIT License.
